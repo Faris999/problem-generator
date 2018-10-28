@@ -1,0 +1,20 @@
+apply plugin: 'idea'
+//and standard one
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
+idea{
+    module{
+        inheritOutputDirs = false
+        outputDir = compileJava.destinationDir
+        testOutputDir = compileTestJava.destinationDir
+    }
+}
+
