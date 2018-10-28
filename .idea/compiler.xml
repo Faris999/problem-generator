@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="QuestionGenerator_main" target="1.8" />
+      <module name="QuestionGenerator_resources" target="1.8" />
       <module name="QuestionGenerator_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
