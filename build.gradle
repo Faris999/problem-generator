@@ -7,6 +7,25 @@ sourceSets {
         java {
             srcDirs = ['src']
         }
+        resources {
+            srcDirs = ['res']
+        }
+    }
+    test{
+        java{
+            srcDirs = ['test']
+        }
+        resources {
+            srcDirs = ['res']
+        }
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+    maven {
+        url = 'http://maven.google.com'
     }
 }
 
@@ -18,3 +37,7 @@ idea{
     }
 }
 
+dependencies{
+    implementation 'com.google.code.gson:gson:2.8.5'
+    testImplementation 'junit:junit:4.12'
+}
