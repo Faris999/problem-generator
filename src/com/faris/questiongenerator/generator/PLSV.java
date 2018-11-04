@@ -1,10 +1,10 @@
-package com.faris.questiongenerator;
+package com.faris.questiongenerator.generator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-public class PLSV {
+public class PLSV extends ProblemInteger {
 
     private Random r;
     private float a, b, c, answer;
@@ -14,7 +14,7 @@ public class PLSV {
     public PLSV() {
     }
 
-    HashMap<String, Integer> generate(int num) {
+    public HashMap<String, Integer> generate(int num) {
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < num; i++) {
             loop:

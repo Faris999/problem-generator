@@ -1,10 +1,10 @@
-package com.faris.questiongenerator;
+package com.faris.questiongenerator.generator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-public class Integers {
+public class Integers extends ProblemInteger {
 
     private int a, b, c, answer;
     private ArrayList<ArrayList<Integer>> log = new ArrayList<>();
@@ -14,7 +14,7 @@ public class Integers {
 
     }
 
-    HashMap<String, Integer> generate(int num) {
+    public HashMap<String, Integer> generate(int num) {
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < num; i++) {
             loop:

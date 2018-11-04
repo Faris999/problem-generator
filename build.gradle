@@ -7,6 +7,17 @@ sourceSets {
         java {
             srcDirs = ['src']
         }
+        resources {
+            srcDirs = ['res']
+        }
+    }
+    test{
+        java{
+            srcDirs = ['test']
+        }
+        resources {
+            srcDirs = ['res']
+        }
     }
 }
 
@@ -21,5 +32,8 @@ repositories {
     mavenCentral()
 }
 dependencies{
+    testImplementation 'junit:junit:4.12'
+    testImplementation group:'org.xerial', name:'sqlite-jdbc', version:'3.25.2'
     implementation group:'org.xerial', name:'sqlite-jdbc', version:'3.25.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
