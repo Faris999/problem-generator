@@ -51,6 +51,10 @@ public class Main {
                     System.out.println(subject);
                 }
                 break;
+            case "help":
+                System.out.println("answer [num] Generate questions to answer.");
+                System.out.println("insights View insights.");
+                System.out.println("list See list of subjects.");
             default:
                 System.out.println("No command named '" + commands[0] + "'");
                 getCommand();
