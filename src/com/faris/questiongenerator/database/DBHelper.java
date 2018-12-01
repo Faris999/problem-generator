@@ -1,7 +1,6 @@
 package com.faris.questiongenerator.database;
 
 import java.sql.*;
-import java.util.GregorianCalendar;
 
 public class DBHelper {
 
@@ -30,14 +29,14 @@ public class DBHelper {
         return rs;
     }
 
-    public static void insert(String name, float score, String subject, Timestamp timestamp, String questions, String correct) {
+    public static void insert(String name, float score, String subject, String timestamp, String questions, String correct) {
         String sql = "INSERT INTO score(score,subject,date,questions,correct) VALUES(?,?,?,?,?)";
 
         try (Connection conn = DBHelper.connect(name);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setFloat(1, score);
             pstmt.setString(2, subject);
-            pstmt.setTimestamp(3, timestamp, new GregorianCalendar());
+            pstmt.setString(3, timestamp);
             pstmt.setString(4, questions);
             pstmt.setString(5, correct);
             pstmt.executeUpdate();
@@ -55,7 +54,7 @@ public class DBHelper {
                 + "	id integer PRIMARY KEY,\n"
                 + "	score real NOT NULL,\n"
                 + "	subject text NOT NULL,\n"
-                + " date timestamp NOT NULL,\n"
+                + " date text NOT NULL,\n"
                 + " questions text NOT NULL,\n"
                 + " correct text NOT NULL"
                 + ");";

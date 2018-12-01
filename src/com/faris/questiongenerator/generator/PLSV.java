@@ -45,7 +45,7 @@ public class PLSV extends ProblemInteger {
                 else if (b == 0)
                     question = "ax + c = 0".replace("a", String.valueOf((int) a)).replace("c", String.valueOf((int) c));
                 else
-                    question = "ax + b = c".replace("a", String.valueOf((int) a)).replace("b", String.valueOf((int) b)).replace("c", String.valueOf((int) c));
+                    question = "ax + b - c = 0".replace("a", String.valueOf((int) a)).replace("b", String.valueOf((int) b)).replace("c", String.valueOf((int) -c));
                 map.put("What is the value of x?\n" +
                         question, (int) answer);
             }
@@ -58,7 +58,7 @@ public class PLSV extends ProblemInteger {
         a = r.nextInt(40) - 20;
         b = r.nextInt(40) - 20;
         c = r.nextInt(40) - 20;
-        type = Type.values()[r.nextInt(Type.values().length - 1)];
+        type = Type.values()[r.nextInt(Type.values().length)];
         switch (type) {
             case A:
                 answer = (c - b) / a;
@@ -80,7 +80,7 @@ public class PLSV extends ProblemInteger {
     }
 
     private enum Type {
-        A, B, C
+        A, B
     }
 
 }

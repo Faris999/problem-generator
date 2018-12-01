@@ -10,7 +10,8 @@ import org.junit.runners.MethodSorters;
 import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,6 +23,7 @@ public class DBHelperTest {
 
     @Test
     public void test1createTable() {
+        //noinspection ResultOfMethodCallIgnored
         new File("res/test.db").delete();
         DBHelper.createNewTable("test");
     }
@@ -29,7 +31,7 @@ public class DBHelperTest {
     @Test
     public void test2insert() {
         Gson gson = new Gson();
-        DBHelper.insert("test", 100, "Integers", new Timestamp(System.currentTimeMillis()), "", gson.toJson(new String[]{"1", "2", "3", "4", "5"}));
+        DBHelper.insert("test", 100, "Integers", new SimpleDateFormat("MM/dd/yyyy hh:mm:ss aa").format(new Date()), "", gson.toJson(new String[]{"1", "2", "3", "4", "5"}));
     }
 
     @Test
