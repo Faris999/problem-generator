@@ -1,15 +1,27 @@
 [
   {
-    "name": "Bat",
-    "characteristics": {
-      "Echolocation": "Detecting objects"
-    }
+    "name": "bat",
+    "characteristics": [
+      {
+        "name": "echolocation",
+        "function": "detecting objects",
+        "isNoun": false
+      }
+    ]
   },
   {
-    "name": "Duck",
-    "characteristics": {
-      "Webbed feet": "swimming and walking on mud",
-      "Wide and flat beak": "find food in the mud"
-    }
+    "name": "duck",
+    "characteristics": [
+      {
+        "name": "webbed feet",
+        "function": "swimming and walking and mud",
+        "isNoun": true
+      },
+      {
+        "name": "wide and flat beak",
+        "function": "find food in the mud",
+        "isNoun": true
+      }
+    ]
   }
 ]

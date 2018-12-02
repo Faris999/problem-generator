@@ -29,6 +29,7 @@ public class Main {
         subjects.add("PLSV");
         subjects.add("Gradient");
         subjects.add("PGL");
+        subjects.add("LivingThingsCharacteristic");
         setupDB();
         getCommand();
     }
@@ -65,6 +66,7 @@ public class Main {
         Gson gson = new Gson();
         ArrayList<String> stringSubjects = new ArrayList<>();
         stringSubjects.add("PGL");
+        stringSubjects.add("LivingThingsCharacteristic");
         for (String subject : subjects) {
             System.out.println();
             System.out.println(subject + ":");
@@ -192,7 +194,7 @@ public class Main {
         } else if (question instanceof ProblemString) {
             for (int i = 0; i < questions.size(); i++) {
                 System.out.println(keySet.toArray()[i]);
-                String answer = sc.nextLine();
+                String answer = sc.nextLine().toLowerCase().trim();
                 correct[i] = answer;
                 if (answer.equals(questions.get(keySet.toArray(new String[0])[i]))) {
                     System.out.println("Correct!");
@@ -226,6 +228,7 @@ public class Main {
             System.err.println("There are no subject named " + type);
             return getType();
         }
+
         return clazz;
     }
 
