@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-QuestionGenerator.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-QuestionGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuestionGenerator.iml" filepath="$PROJECT_DIR$/QuestionGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/QuestionGenerator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/QuestionGenerator_main.iml" group="QuestionGenerator" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/QuestionGenerator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/QuestionGenerator_test.iml" group="QuestionGenerator" />

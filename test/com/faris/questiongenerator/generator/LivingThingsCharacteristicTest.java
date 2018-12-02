@@ -1,4 +1,4 @@
-package com.faris.questiongenerator;
+package com.faris.questiongenerator.generator;
 
 import com.faris.questiongenerator.generator.LivingThingsCharacteristic;
 import org.junit.Test;
